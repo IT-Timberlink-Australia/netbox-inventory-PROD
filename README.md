@@ -1,0 +1,2 @@
+# netbox-inventory
+Netbox Inventory
