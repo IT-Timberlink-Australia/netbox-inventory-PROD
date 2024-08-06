@@ -1,9 +1,0 @@
-requirements.yml
----
-collections:
-  - name: awx.awx
-  - name: arubanetworks.aos_switch
-  - name: arubanetworks.aoscx
-  - name: community.general
-  - name: fedora.linux_system_roles
-  - name: netbox.netbox
