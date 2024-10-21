@@ -1,3 +1,4 @@
+---
 plugin: netbox.netbox.nb_inventory
 api_endpoint: 'https://netbox.timberlinkaustralia.com.au/'
 token: '7831b00f44e389573362de3a01ec419c32680db8'
@@ -8,7 +9,7 @@ compose:
 interfaces: true
 group_names_raw: true
 group_by:
-  - device_roles
+  - platform
 query_filters: []
 device_query_filters:
   - has_primary_ip: 'true'
