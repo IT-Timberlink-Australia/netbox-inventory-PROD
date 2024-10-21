@@ -1,6 +1,6 @@
 plugin: netbox.netbox.nb_inventory
-api_endpoint: 'https://netbox.timberlinkaustralia.com.au/'
-token: '7831b00f44e389573362de3a01ec419c32680db8'
+netbox_url: "{{ netbox_url }}"
+netbox_token: "{{ netbox_token }}"
 validate_certs: false
 config_context: true
 compose:
@@ -8,12 +8,12 @@ compose:
 interfaces: true
 group_names_raw: true
 group_by:
-  - platforms
   - sites
 query_filters: []
 device_query_filters:
   - has_primary_ip: 'true'
   - status: 'active'
+  - platform: 'aoscx'
 vm_query_filters:
   - has_primary_ip: 'true'
   - status: 'active'
