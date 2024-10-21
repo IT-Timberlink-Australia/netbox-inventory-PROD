@@ -1,6 +1,6 @@
 plugin: netbox.netbox.nb_inventory
-netbox_url: "{{ netbox_url }}"
-netbox_token: "{{ netbox_token }}"
+api_endpoint: "{{ netbox_url }}"
+token: "{{ netbox_token }}"
 validate_certs: false
 config_context: true
 compose:
