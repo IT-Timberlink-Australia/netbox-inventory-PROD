@@ -11,5 +11,5 @@ query_filters: []
 device_query_filters:
   - has_primary_ip: 'true'
   - status: 'active'
-  - platform: 'aoscx'
+  - platform_id: 1
 flatten_customer_fields: true
