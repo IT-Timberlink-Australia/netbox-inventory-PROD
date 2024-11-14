@@ -10,9 +10,6 @@ group_by:
  - platforms
 query_filters:
  - is_virtual: 'true'
-device_query_filters:
- - has_primary_ip: 'true'
- - status: 'active'
 vm_query_filters:
  - has_primary_ip: 'true'
  - status: 'active'
