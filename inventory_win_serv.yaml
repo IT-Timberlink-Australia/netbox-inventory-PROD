@@ -9,7 +9,7 @@ group_by:
   - sites
   - platforms
 query_filters: 
-  - platform: 'Window*'
+  - platform: Window*
 device_query_filters:
   - has_primary_ip: 'true'
   - status: 'active'
