@@ -10,6 +10,7 @@ group_by:
  - platforms
 query_filters: 
  - is_virtual: true
+ - device_roles: application-server-ap
 device_query_filters:
  - has_primary_ip: 'true'
  - status: 'active'
