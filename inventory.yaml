@@ -7,6 +7,7 @@ interfaces: true
 group_names_raw: true
 group_by:
   - sites
+  - platform
 query_filters: []
 device_query_filters:
   - has_primary_ip: 'true'
