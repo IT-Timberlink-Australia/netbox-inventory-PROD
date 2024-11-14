@@ -9,7 +9,7 @@ group_by:
   - sites
 query_filters: []
 device_query_filters:
+  - platform: aoscx
   - has_primary_ip: 'true'
   - status: 'active'
-  - platform: aoscx
 flatten_customer_fields: true
