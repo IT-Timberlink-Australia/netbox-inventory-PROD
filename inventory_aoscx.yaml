@@ -7,9 +7,9 @@ interfaces: true
 group_names_raw: true
 group_by:
   - sites
-query_filters: []
+query_filters: 
+  - aplatform: aoscx
 device_query_filters:
-  - ansible_network_os: "aoscx"
   - has_primary_ip: 'true'
   - status: 'active'
 flatten_customer_fields: true
