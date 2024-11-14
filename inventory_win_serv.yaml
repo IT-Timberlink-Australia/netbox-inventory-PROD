@@ -1,0 +1,19 @@
+plugin: netbox.netbox.nb_inventory
+validate_certs: false
+config_context: true
+compose:
+ ansible_machine_os: platform.slug
+interfaces: true
+group_names_raw: true
+group_by:
+  - sites
+  - platforms
+query_filters: 
+  - platform: windows
+device_query_filters:
+  - has_primary_ip: 'true'
+  - status: 'active'
+vm_query_filters:
+  - has_primary_ip: 'true'
+  - status: 'active'
+flatten_customer_fields: true
