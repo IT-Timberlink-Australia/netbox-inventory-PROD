@@ -6,14 +6,14 @@ compose:
 interfaces: true
 group_names_raw: true
 group_by:
-  - sites
-  - platforms
+ - sites
+ - platforms
 query_filters: 
-  - role: 'Application Server (AP)'
+ - is_virtual: true
 device_query_filters:
-  - has_primary_ip: 'true'
-  - status: 'active'
+ - has_primary_ip: 'true'
+ - status: 'active'
 vm_query_filters:
-  - has_primary_ip: 'true'
-  - status: 'active'
+ - has_primary_ip: 'true'
+ - status: 'active'
 flatten_customer_fields: true
