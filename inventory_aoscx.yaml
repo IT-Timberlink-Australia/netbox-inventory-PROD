@@ -1,26 +1,26 @@
 # inventory_aoscx.yaml
----
 plugin: netbox.netbox.nb_inventory
-api_endpoint: "https://netbox.timberlinkaustralia.com.au"
-token: "{{ lookup('env', 'NETBOX_TOKEN') }}"    # Or use your credential variable
+api_endpoint: "https://netbox.timberlinkaustralia.com.au/api"
+token: "{{ lookup('env', 'NETBOX_TOKEN') }}"
 validate_certs: false
 
 # Required configuration
 config_context: true
 compose:
-  ansible_network_os: platform.slug
-  ansible_host: primary_ip.address.split('/')[0]
-
-# Grouping configuration
-group_by:
-  - sites
-  - platform
-keyed_groups:
-  - key: device_role.slug
-    prefix: "role"
+  ansible_network_os: "platform.slug"
+  ansible_host: "primary_ip.address.split('/')[0]"
 
 # Filter configuration
 query_filters:
-  - platform__n: ["aoscx", "aoscx_l2"]
-  - status: "active"
-  - has_primary_ip: "true"
+  - "platform__n=['aoscx','aoscx_l2']"
+  - "status='active'"
+  - "has_primary_ip='true'"
+
+# Grouping configuration
+group_by:
+  - "sites"
+  - "platform"
+keyed_groups:
+  - key: "device_role.slug"
+    prefix: "role"
+    separator: ""
