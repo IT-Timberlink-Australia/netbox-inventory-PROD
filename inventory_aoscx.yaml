@@ -8,7 +8,8 @@ group_names_raw: true
 group_by:
   - sites
 query_filters: 
-  - platform: aoscx, aoscx_l2
+  - platform: aoscx
+  - platform: aoscx_l2
 device_query_filters:
   - has_primary_ip: 'true'
   - status: 'active'
