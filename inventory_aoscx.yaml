@@ -12,4 +12,3 @@ query_filters:
   - has_primary_ip: 'true'
 group_by:
   - sites
-  - platform
