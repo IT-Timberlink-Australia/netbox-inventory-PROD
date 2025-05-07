@@ -3,7 +3,6 @@ validate_certs: false
 config_context: true
 compose:
   ansible_network_os: platform.slug
-  ansible_host: primary_ip.address.split('/')[0]
 query_filters:
   - platform: 'aoscx_l2'
   - status: 'active'
@@ -11,7 +10,3 @@ query_filters:
 group_by:
   - sites
   - platform
-keyed_groups:
-  - key: device_role.slug
-    prefix: role
-    separator: ""
