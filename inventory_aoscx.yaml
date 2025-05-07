@@ -1,6 +1,6 @@
 # inventory_aoscx.yaml
 plugin: netbox.netbox.nb_inventory
-api_endpoint: "https://netbox.timberlinkaustralia.com.au/api"
+api_endpoint: "https://netbox.timberlinkaustralia.com.au"
 token: "{{ lookup('env', 'NETBOX_TOKEN') }}"
 validate_certs: false
 
