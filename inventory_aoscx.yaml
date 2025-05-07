@@ -1,5 +1,7 @@
 # inventory_aoscx.yaml
 plugin: netbox.netbox.nb_inventory
+api_endpoint: "{{ netbox_api_url }}"
+token: "{{ netbox_token }}"
 validate_certs: false
 config_context: true
 compose:
