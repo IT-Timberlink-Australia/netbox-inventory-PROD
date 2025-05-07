@@ -1,15 +1,26 @@
+---
 plugin: netbox.netbox.nb_inventory
 validate_certs: false
 config_context: true
 compose:
- ansible_network_os: platform.slug
-interfaces: true
-group_names_raw: true
+  ansible_network_os: platform.slug         # Sets ansible_network_os from platform slug
+  ansible_host: primary_ip.address.split('/')[0]  # Extracts IP without CIDR
+interfaces: true                            # Includes interface data
+group_names_raw: true                       # Preserves raw group names
 group_by:
-  - sites
+  - sites                                   # Groups devices by site
+  - platform                                # Additional grouping by platform
+
+# Combined filters for the inventory
 query_filters: 
-  - platform__n: ["aoscx", "aoscx_l2"] 
-device_query_filters:
-  - has_primary_ip: 'true'
-  - status: 'active'
-flatten_customer_fields: true
+  - platform__n: ["aoscx", "aoscx_l2"]     # Platform slug filter (OR condition)
+  - status: 'active'                        # Only active devices
+  - has_primary_ip: 'true'                  # Only devices with primary IP
+
+# Alternative format using device_query_filters (choose one)
+# device_query_filters:
+#   platform__n: ["aoscx", "aoscx_l2"]
+#   status: 'active'
+#   has_primary_ip: 'true'
+
+flatten_custom_fields: true  
