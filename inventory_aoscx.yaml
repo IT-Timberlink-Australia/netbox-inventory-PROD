@@ -1,10 +1,13 @@
 plugin: netbox.netbox.nb_inventory
 validate_certs: false
 config_context: true
+flatten_custom_fields: true
 compose:
   ansible_network_os: platform.slug
-query_filters:
+device_query_filters:
   - platform: 'aoscx_l2'
+  - platform: 'aoscx'
+query_filters:
   - status: 'active'
   - has_primary_ip: 'true'
 group_by:
