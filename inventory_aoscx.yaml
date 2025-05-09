@@ -4,6 +4,11 @@ config_context: true
 flatten_custom_fields: true
 compose:
   ansible_network_os: platform.slug
+  ansible_host: "primary_ip.address.split('/')[0]"
+  site_id: "site.id"
+  site_slug: "site.slug"
+  device_role_slug: "device_role.slug"
+  tags: "tags"
 device_query_filters:
   - platform: 'aoscx_l2'
   - platform: 'aoscx'
