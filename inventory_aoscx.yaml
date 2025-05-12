@@ -9,11 +9,11 @@ compose:
   site_slug: "site.slug"
   device_role_slug: "device_role.slug"
   tags: "tags"
-device_query_filters:
-  - platform: 'aoscx_l2'
-  - platform: 'aoscx'
+#device_query_filters:
 query_filters:
   - status: 'active'
   - has_primary_ip: 'true'
+  - platform: 'aoscx_l2'
+  - platform: 'aoscx'
 group_by:
   - sites
